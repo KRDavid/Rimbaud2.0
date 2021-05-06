@@ -1,0 +1,18 @@
+<h1>Rimbaud 2.0 ({{ posts|length }} articles)</h1>
+
+{% for post in posts %}
+    <article>
+        <h2><a href="#">#{{ post.id }} - {{ post.title }}</a></h2>
+        <p>{{ post.body }}</p>
+
+        <p><a href='#'>Lire la suite</a></p>
+
+    </article>
+    {% if not forloop.last %}
+    <hr>
+    {% endif %}
+{% empty %}
+    <p>Sorry, no article available</p>
+
+
+{% endfor %}

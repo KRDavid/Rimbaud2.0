@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'article_creation',
+    'article_creation.apps.ArticleCreationConfig',
 ]
 
 MIDDLEWARE = [

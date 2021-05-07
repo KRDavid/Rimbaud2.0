@@ -1,0 +1,23 @@
+<html>
+    <body>
+        
+    {% for post in data %}
+        <a href="/article_creation/posts/{{ post.id }}">{{ post.title }}</a>
+        <p>{{ post.description }}</p>
+        <p>{{ post.article }}</p>
+        <br>
+        <br>
+    {% endfor %}
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+

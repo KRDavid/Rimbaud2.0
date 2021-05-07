@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+
+<body>
+
+    <a href="/article/homepage">back to hello page</a>
+    <br><br><br>
+
+
+    {% for article in data %}
+    <a href="/article/id/{{ article.id }}">{{ article.title }}</a>
+    <p>{{ article.description }}</p>
+    <p>{{ article.article }}</p>
+    <br>
+    <br>
+    {% endfor %}
+
+    <p>Test</p>
+</body>
+
+
+
+</html>

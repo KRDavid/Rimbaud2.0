@@ -10,7 +10,19 @@
     <a href="/article/homepage">back to hello page</a>
     <br><br><br>
 
+    <form action="/article/search" method="POST">
+        {% csrf_token %}
+        <input type="text" id="titre" name="titre" required minlength="1" maxlength="30" size="30"
+            placeholder="titre de l'article recherché">
+        <button>Rechercher</button>
+    </form>
 
+    <form action="/article/searchid" method="POST">
+        {% csrf_token %}
+        <input type="text" id="id" name="id" required minlength="1" maxlength="30" size="30"
+            placeholder="id de l'article recherché">
+        <button>Rechercher</button>
+    </form>
     {% for article in data %}
     <a href="/article/id/{{ article.id }}">{{ article.title }}</a>
     <p>{{ article.description }}</p>

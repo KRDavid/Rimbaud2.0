@@ -1,27 +1,27 @@
 <html>
 
-    <body>
-        <a href="/article/homepage">back to homepage</a>
-        <br>
+<body>
+    <a href="/article/homepage">back to homepage</a>
+    <br>
+    <form action="/article/addart" method="POST">
+        {% csrf_token %}
         <label for="titre">Titre</label>
-        <input type="text" id="titre" name="titre" required
-       minlength="1" maxlength="3" size="30">
-       <br>
-       <br>
-       <label for="desc">Description</label>
-        <textarea id="desc" name="desc" required
-       minlength="0" maxlength="100" rows="5" cols="30"></textarea>
-       <br>
-       <br>
-       <label for="article">Article</label>
-       <textarea id="article" name="article" required
-       minlength="0" maxlength="5000" rows="10" cols="50"></textarea>
-       <br><br>
+        <input type="text" id="titre" name="titre" required minlength="1" maxlength="30" size="30">
+        <br>
+        <br>
+        <label for="desc">Description</label>
+        <textarea id="desc" name="desc" required minlength="0" maxlength="100" rows="5" cols="30"></textarea>
+        <br>
+        <br>
+        <label for="article">Article</label>
+        <textarea id="article" name="article" required minlength="0" maxlength="5000" rows="10" cols="50"></textarea>
+        <br><br>
 
-       <label for="date">Date limite de consultation</label>
-        <input type="date" id="date" name="date" required
-       minlength="10" maxlength="10" size="30">
-       <br><br>
-       <a href=""><button>Envoyer</button></a>
-    </body>
+        <label for="date">Date limite de consultation</label>
+        <input type="date" id="date" name="date" required minlength="10" maxlength="10" size="30">
+        <br><br>
+        <button>Envoyer</button>
+    </form>
+</body>
+
 </html>

@@ -8,4 +8,6 @@ urlpatterns = [
     path('addart', views.add_article),
     path('check', views.check_articles),
     path('id/<int:id>', views.view_article),
+    path('search', views.search),
+    path('searchid', views.searchid),
 ]

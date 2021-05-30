@@ -69,6 +69,7 @@ To get a local copy up and running follow these simple steps.
     ```sh
     python manage.py make migration
     python manage.py migrate
+    python manage.py runserver
     ```  
     
   
